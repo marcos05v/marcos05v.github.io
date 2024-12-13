@@ -153,7 +153,7 @@ section{
 
 /* Mostrar la información */
 #infow1.visible {
-    max-height: 1000px; /* Altura suficiente para contenido visible */
+    max-height: 1500px; /* Altura suficiente para contenido visible */
     opacity: 1; /* Totalmente opaco */
     margin-top: 10px; /* Añade margen al desplegarse */
     padding: 20px; /* Agrega padding cuando se muestra */
