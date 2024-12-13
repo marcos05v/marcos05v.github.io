@@ -1,0 +1,589 @@
+@import url();
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+
+header{
+    background: url(data:image/jpeg;base64,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);
+    background-repeat: no-repeat;
+    background-size: 80% ;
+    background-position: center center;
+    height: 150px;
+    overflow: hidden;
+}
+
+
+h1{
+    color: #fff;
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    font-size: 100px;
+    text-shadow: 5px 3px 8px #785;
+}
+body{
+    background: url(https://img.freepik.com/fotos-premium/abeto-navidad-decoracion-brillos-sobre-fondo-madera-fondo-navidad-escritorio-madera-blanca_255667-6817.jpg?semt=ais_hybrid);
+    background-size: 80%;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+} 
+
+section{
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#wish1{
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background: url(https://lacronicadehoy-lacronicadehoy-prod.web.arc-cdn.net/resizer/v2/RMRAQ6U7PUR5NA5BGAY2H5VIRM.jpg?auth=6cb24463d83d0669382c24340d2915c57c703dcce50e23a6ef2e201c7af2aeac&width=800&height=358);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f9f9f9;
+    font-size: 30px;
+    font-weight: bold; /* Hace el texto más grueso */
+    text-align: center;
+    text-shadow: 2px 2px 4px #000; 
+    border: 2px solid #D1F2EB;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+
+
+#wish2{
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background: url('estetica.jpg');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold; /* Hace el texto más grueso */
+    text-shadow: 2px 2px 4px #000; 
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+#wish3{
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background: url('spidersueter.png');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold; /* Hace el texto más grueso */
+    text-align: center;
+    text-shadow: 2px 2px 4px #000; 
+    border: 2px solid #B03A2E;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+#wish4{
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background: url('aretes.png');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold; /* Hace el texto más grueso */
+    text-align: center;
+    text-shadow: 2px 2px 4px #000; 
+    border: 2px solid #D0D3D4;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+
+.wishlist-item:hover{
+    transform: scale(1.05);
+}
+
+/* Información de wish1 */
+#infow1{
+    margin: 0 auto; /* Alineación centrada */
+    padding: 50px 20px; /* Igual que wish1 */
+    max-width: 800px; /* Igual que wish1 */
+    width: 100%; /* Asegura que ocupe todo el espacio disponible */
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px; /* Igual que wish1 */
+    max-height: 0; /* Altura inicial */
+    opacity: 0; /* Transparente al inicio */
+    overflow: hidden; /* Evita que el contenido desborde */
+    transform-origin: top; /* Punto de inicio de la animación */
+    transition: max-height 0.7s ease, opacity 0.4s ease; /* Animación fluida */
+}
+
+/* Mostrar la información */
+#infow1.visible {
+    max-height: 1000px; /* Altura suficiente para contenido visible */
+    opacity: 1; /* Totalmente opaco */
+    margin-top: 10px; /* Añade margen al desplegarse */
+    padding: 20px; /* Agrega padding cuando se muestra */
+}
+
+/* Estilo específico para infow1 */
+#infow1 {
+    background-color: #D4EFDF;
+}
+
+/* Título */
+#infow1 h2 {
+    font-family: cursive; /* Fuente más elegante */
+    font-size: 35px; /* Tamaño específico */
+    font-weight: bold; /* Grosor */
+    color: #333; /* Color oscuro */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Separación con el contenido */
+}
+
+/* Párrafos */
+#infow1 p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente clara y legible */
+    font-weight: bold; /* Negrita para destacar */
+    font-size: 15px; /* Tamaño del texto */
+    color: #000; /* Texto negro */
+    text-align: justify; /* Justificación del texto */
+    line-height: 1.8; /* Mejora el espaciado entre líneas */
+    margin-bottom: 15px; /* Añade espacio entre párrafos */
+}
+
+/* Elementos de lista */
+#infow1 li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente clara */
+    font-weight: bold; /* Negrita */
+    font-size: 15px; /* Tamaño del texto */
+    color: #000; /* Texto negro */
+    text-align: justify; /* Justificar texto */
+    line-height: 1.8; /* Espaciado entre líneas */
+    margin-bottom: 15px; /* Espacio entre elementos */
+    list-style-type: none; /* Elimina viñetas predeterminadas */
+    position: relative; /* Para el ícono personalizado */
+    padding-left: 30px; /* Espacio para el ícono */
+}
+
+/* Ícono personalizado en los elementos de lista */
+#infow1 li::before {
+    content: "✔"; /* Ícono personalizado */
+    color: #4CAF50; /* Color del ícono */
+    position: absolute; /* Posiciona el ícono a la izquierda */
+    left: 0; /* Alineado a la izquierda del elemento */
+    font-size: 18px; /* Tamaño del ícono */
+}
+
+/* Enlaces dentro de los elementos de lista */
+#infow1 li a {
+    color: #4CAF50; /* Enlaces en verde */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* En negrita */
+}
+
+#infow1 li a:hover {
+    color: #45a049; /* Verde más oscuro al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+/* Estilo para la clase image */
+.image {
+    display: flex; /* Asegura que se comporte como un bloque alineable */
+    justify-content: center;
+    text-align: center; /* Centra el pie de imagen */
+    max-width: 50%; /* La imagen no excederá el tamaño del contenedor */
+    margin: 20px auto; /* Añade espacio alrededor del contenedor */
+    border-radius: 10px; /* Bordes redondeados para el contenedor */
+    overflow: hidden; /* Oculta cualquier contenido desbordado */
+    background-color: #f9f9f9; /* Fondo suave */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+}
+
+/* Estilo para la imagen */
+.image img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    display: block; /* Evita el espacio extra en imágenes */
+    border-bottom: 2px solid #ddd; /* Línea debajo de la imagen */
+    text-align: center;
+}
+
+#infow1 figcaption{
+    font-family: 'Arial', sans-serif; /* Fuente limpia y legible */
+    font-size: 14px; /* Tamaño del texto */
+    color: #555; /* Color gris oscuro */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    margin-top: 0; /* Sin espacio adicional */
+}
+
+
+
+
+
+
+
+
+/* Información de wish1 */
+#infow2{
+    margin: 0 auto; /* Alineación centrada */
+    padding: 50px 20px; /* Igual que wish1 */
+    max-width: 800px; /* Igual que wish1 */
+    width: 100%; /* Asegura que ocupe todo el espacio disponible */
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px; /* Igual que wish1 */
+    max-height: 0; /* Altura inicial */
+    opacity: 0; /* Transparente al inicio */
+    overflow: hidden; /* Evita que el contenido desborde */
+    transform-origin: top; /* Punto de inicio de la animación */
+    transition: max-height 0.4s ease, opacity 0.4s ease; /* Animación fluida */
+}
+
+/* Mostrar la información */
+#infow2.visible {
+    max-height: 1500px; /* Altura suficiente para contenido visible */
+    opacity: 1; /* Totalmente opaco */
+    margin-top: 10px; /* Añade margen al desplegarse */
+    padding: 20px; /* Agrega padding cuando se muestra */
+}
+
+/* Estilo específico para infow1 */
+#infow2 {
+    background-color: #000;
+}
+
+/* Título */
+#infow2 h2 {
+    font-family: cursive; /* Fuente más elegante */
+    font-size: 35px; /* Tamaño específico */
+    font-weight: bold; /* Grosor */
+    color: #fff; /* Color oscuro */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Separación con el contenido */
+}
+
+/* Párrafos */
+#infow2 p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente clara y legible */
+    font-weight: bold; /* Negrita para destacar */
+    font-size: 15px; /* Tamaño del texto */
+    color: #fff; /* Texto negro */
+    text-align: justify; /* Justificación del texto */
+    line-height: 1.8; /* Mejora el espaciado entre líneas */
+    margin-bottom: 15px; /* Añade espacio entre párrafos */
+}
+
+/* Elementos de lista */
+#infow2 li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente clara */
+    font-weight: bold; /* Negrita */
+    font-size: 15px; /* Tamaño del texto */
+    color: #fff; /* Texto negro */
+    text-align: justify; /* Justificar texto */
+    line-height: 1.8; /* Espaciado entre líneas */
+    margin-bottom: 15px; /* Espacio entre elementos */
+    list-style-type: none; /* Elimina viñetas predeterminadas */
+    position: relative; /* Para el ícono personalizado */
+    padding-left: 30px; /* Espacio para el ícono */
+}
+
+/* Ícono personalizado en los elementos de lista */
+#infow2 li::before {
+    content: "✔"; /* Ícono personalizado */
+    color: #fff; /* Color del ícono */
+    position: absolute; /* Posiciona el ícono a la izquierda */
+    left: 0; /* Alineado a la izquierda del elemento */
+    font-size: 18px; /* Tamaño del ícono */
+}
+
+/* Enlaces dentro de los elementos de lista */
+#infow2 li a {
+    color: #E5E8E8; /* Enlaces en verde */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* En negrita */
+}
+
+#infow2 li a:hover {
+    color: #E5E8E8; /* Verde más oscuro al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+
+/* Estilo para la imagen */
+.image img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    display: block; /* Evita el espacio extra en imágenes */
+    border-bottom: 2px solid #ddd; /* Línea debajo de la imagen */
+    text-align: center;
+}
+
+#infow2 figcaption{
+    font-family: 'Arial', sans-serif; /* Fuente limpia y legible */
+    font-size: 14px; /* Tamaño del texto */
+    color: whitesmoke; /* Color gris oscuro */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    margin-top: 0; /* Sin espacio adicional */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Información de wish1 */
+#infow3{
+    margin: 0 auto; /* Alineación centrada */
+    padding: 50px 20px; /* Igual que wish1 */
+    max-width: 800px; /* Igual que wish1 */
+    width: 100%; /* Asegura que ocupe todo el espacio disponible */
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px; /* Igual que wish1 */
+    max-height: 0; /* Altura inicial */
+    opacity: 0; /* Transparente al inicio */
+    overflow: hidden; /* Evita que el contenido desborde */
+    transform-origin: top; /* Punto de inicio de la animación */
+    transition: max-height 0.4s ease, opacity 0.4s ease; /* Animación fluida */
+}
+
+/* Mostrar la información */
+#infow3.visible {
+    max-height: 1500px; /* Altura suficiente para contenido visible */
+    opacity: 1; /* Totalmente opaco */
+    margin-top: 10px; /* Añade margen al desplegarse */
+    padding: 20px; /* Agrega padding cuando se muestra */
+}
+
+/* Estilo específico para infow1 */
+#infow3{
+    background-color: #E74C3C;
+}
+
+/* Título */
+#infow3 h2 {
+    font-family: cursive; /* Fuente más elegante */
+    font-size: 35px; /* Tamaño específico */
+    font-weight: bold; /* Grosor */
+    color: #fff; /* Color oscuro */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Separación con el contenido */
+}
+
+/* Párrafos */
+#infow3 p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente clara y legible */
+    font-weight: bold; /* Negrita para destacar */
+    font-size: 15px; /* Tamaño del texto */
+    color: #fff; /* Texto negro */
+    text-align: justify; /* Justificación del texto */
+    line-height: 1.8; /* Mejora el espaciado entre líneas */
+    margin-bottom: 15px; /* Añade espacio entre párrafos */
+}
+
+/* Elementos de lista */
+#infow3 li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente clara */
+    font-weight: bold; /* Negrita */
+    font-size: 15px; /* Tamaño del texto */
+    color: #fff; /* Texto negro */
+    text-align: justify; /* Justificar texto */
+    line-height: 1.8; /* Espaciado entre líneas */
+    margin-bottom: 15px; /* Espacio entre elementos */
+    list-style-type: none; /* Elimina viñetas predeterminadas */
+    position: relative; /* Para el ícono personalizado */
+    padding-left: 30px; /* Espacio para el ícono */
+}
+
+/* Ícono personalizado en los elementos de lista */
+#infow3 li::before {
+    content: "✔"; /* Ícono personalizado */
+    color: #fff; /* Color del ícono */
+    position: absolute; /* Posiciona el ícono a la izquierda */
+    left: 0; /* Alineado a la izquierda del elemento */
+    font-size: 18px; /* Tamaño del ícono */
+}
+
+/* Enlaces dentro de los elementos de lista */
+#infow3 li a {
+    color: #E5E8E8; /* Enlaces en verde */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* En negrita */
+}
+
+#infow3 li a:hover {
+    color: #E5E8E8; /* Verde más oscuro al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Estilo para la imagen */
+.image img {
+    width: 100px; /* Define el ancho en píxeles */
+    height: 50px; /* Define el alto en píxeles */
+    display: block; /* Evita el espacio extra en imágenes */
+    border-bottom: 2px solid #ddd; /* Línea debajo de la imagen */
+    text-align: center;
+}
+
+#infow3 figcaption{
+    font-family: 'Arial', sans-serif; /* Fuente limpia y legible */
+    font-size: 14px; /* Tamaño del texto */
+    color: whitesmoke; /* Color gris oscuro */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    margin-top: 0; /* Sin espacio adicional */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Información de wish1 */
+#infow4{
+    margin: 0 auto; /* Alineación centrada */
+    padding: 50px 20px; /* Igual que wish1 */
+    max-width: 800px; /* Igual que wish1 */
+    width: 100%; /* Asegura que ocupe todo el espacio disponible */
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 8px; /* Igual que wish1 */
+    max-height: 0; /* Altura inicial */
+    opacity: 0; /* Transparente al inicio */
+    overflow: hidden; /* Evita que el contenido desborde */
+    transform-origin: top; /* Punto de inicio de la animación */
+    transition: max-height 0.4s ease, opacity 0.4s ease; /* Animación fluida */
+}
+
+/* Mostrar la información */
+#infow4.visible {
+    max-height: 1500px; /* Altura suficiente para contenido visible */
+    opacity: 1; /* Totalmente opaco */
+    margin-top: 10px; /* Añade margen al desplegarse */
+    padding: 20px; /* Agrega padding cuando se muestra */
+}
+
+/* Estilo específico para infow1 */
+#infow4{
+    background-color: #2471A3;
+}
+/* Título */
+#infow4 h2 {
+    font-family: cursive; /* Fuente más elegante */
+    font-size: 35px; /* Tamaño específico */
+    font-weight: bold; /* Grosor */
+    color: #fff; /* Color oscuro */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Separación con el contenido */
+}
+
+/* Párrafos */
+#infow4 p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente clara y legible */
+    font-weight: bold; /* Negrita para destacar */
+    font-size: 15px; /* Tamaño del texto */
+    color: #fff; /* Texto negro */
+    text-align: justify; /* Justificación del texto */
+    line-height: 1.8; /* Mejora el espaciado entre líneas */
+    margin-bottom: 15px; /* Añade espacio entre párrafos */
+}
+
+/* Elementos de lista */
+#infow4 li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente clara */
+    font-weight: bold; /* Negrita */
+    font-size: 15px; /* Tamaño del texto */
+    color: #fff; /* Texto negro */
+    text-align: justify; /* Justificar texto */
+    line-height: 1.8; /* Espaciado entre líneas */
+    margin-bottom: 15px; /* Espacio entre elementos */
+    list-style-type: none; /* Elimina viñetas predeterminadas */
+    position: relative; /* Para el ícono personalizado */
+    padding-left: 30px; /* Espacio para el ícono */
+}
+
+/* Ícono personalizado en los elementos de lista */
+#infow4 li::before {
+    content: "✔"; /* Ícono personalizado */
+    color: #fff; /* Color del ícono */
+    position: absolute; /* Posiciona el ícono a la izquierda */
+    left: 0; /* Alineado a la izquierda del elemento */
+    font-size: 18px; /* Tamaño del ícono */
+}
+
+/* Enlaces dentro de los elementos de lista */
+#infow4 li a {
+    color: #E5E8E8; /* Enlaces en verde */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* En negrita */
+}
+
+#infow4 li a:hover {
+    color: #E5E8E8; /* Verde más oscuro al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Estilo para la imagen */
+.image img {
+    width: 100px; /* Define el ancho en píxeles */
+    height: 50px; /* Define el alto en píxeles */
+    display: block; /* Evita el espacio extra en imágenes */
+    border-bottom: 2px solid #ddd; /* Línea debajo de la imagen */
+    text-align: center;
+}
+
+#infow4 figcaption{
+    font-family: 'Arial', sans-serif; /* Fuente limpia y legible */
+    font-size: 14px; /* Tamaño del texto */
+    color: whitesmoke; /* Color gris oscuro */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    margin-top: 0; /* Sin espacio adicional */
+}
+
